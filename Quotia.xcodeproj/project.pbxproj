@@ -97,12 +97,9 @@
 		4C20368E21B1DE2B00F32A7F /* Quotia */ = {
 			isa = PBXGroup;
 			children = (
-				4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */,
-				4C20369121B1DE2B00F32A7F /* ViewController.swift */,
-				4C20369321B1DE2B00F32A7F /* Main.storyboard */,
-				4C20369621B1DE2E00F32A7F /* Assets.xcassets */,
-				4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */,
 				4C20369B21B1DE2E00F32A7F /* Info.plist */,
+				4C2036BD21B1DEF500F32A7F /* Resources */,
+				4C2036BE21B1DF0100F32A7F /* Sources */,
 			);
 			path = Quotia;
 			sourceTree = "<group>";
@@ -123,6 +120,25 @@
 				4C2036B121B1DE2E00F32A7F /* Info.plist */,
 			);
 			path = QuotiaUITests;
+			sourceTree = "<group>";
+		};
+		4C2036BD21B1DEF500F32A7F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C20369321B1DE2B00F32A7F /* Main.storyboard */,
+				4C20369621B1DE2E00F32A7F /* Assets.xcassets */,
+				4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C2036BE21B1DF0100F32A7F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */,
+				4C20369121B1DE2B00F32A7F /* ViewController.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
