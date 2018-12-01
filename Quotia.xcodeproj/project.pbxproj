@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */; };
-		4C20369221B1DE2B00F32A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20369121B1DE2B00F32A7F /* ViewController.swift */; };
 		4C20369521B1DE2B00F32A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C20369321B1DE2B00F32A7F /* Main.storyboard */; };
 		4C20369721B1DE2E00F32A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C20369621B1DE2E00F32A7F /* Assets.xcassets */; };
 		4C20369A21B1DE2E00F32A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		4C20368C21B1DE2B00F32A7F /* Quotia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C20369121B1DE2B00F32A7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C20369421B1DE2B00F32A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C20369621B1DE2E00F32A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C20369921B1DE2E00F32A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */,
-				4C20369121B1DE2B00F32A7F /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -280,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C20369221B1DE2B00F32A7F /* ViewController.swift in Sources */,
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
