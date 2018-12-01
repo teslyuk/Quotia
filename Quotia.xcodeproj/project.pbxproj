@@ -15,6 +15,7 @@
 		4C2036B021B1DE2E00F32A7F /* QuotiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036AF21B1DE2E00F32A7F /* QuotiaUITests.swift */; };
 		4C2036C121B30FE100F32A7F /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036BF21B30FE100F32A7F /* Data */; };
 		4C2036C221B30FE100F32A7F /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036C021B30FE100F32A7F /* Model */; };
+		4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4C2036B121B1DE2E00F32A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2036BF21B30FE100F32A7F /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		4C2036C021B30FE100F32A7F /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		4C20368E21B1DE2B00F32A7F /* Quotia */ = {
 			isa = PBXGroup;
 			children = (
+				4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */,
 				4C2036BE21B1DF0100F32A7F /* Sources */,
 				4C2036BD21B1DEF500F32A7F /* Resources */,
 				4C2036BF21B30FE100F32A7F /* Data */,
@@ -139,7 +142,7 @@
 		4C2036BE21B1DF0100F32A7F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4C20368F21B1DE2B00F32A7F /* AppDelegate.swift */,
+				4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
+				4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
