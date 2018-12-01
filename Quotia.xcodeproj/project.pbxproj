@@ -14,6 +14,8 @@
 		4C20369A21B1DE2E00F32A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */; };
 		4C2036A521B1DE2E00F32A7F /* QuotiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036A421B1DE2E00F32A7F /* QuotiaTests.swift */; };
 		4C2036B021B1DE2E00F32A7F /* QuotiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036AF21B1DE2E00F32A7F /* QuotiaUITests.swift */; };
+		4C2036C121B30FE100F32A7F /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036BF21B30FE100F32A7F /* Data */; };
+		4C2036C221B30FE100F32A7F /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036C021B30FE100F32A7F /* Model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4C2036AB21B1DE2E00F32A7F /* QuotiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2036AF21B1DE2E00F32A7F /* QuotiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotiaUITests.swift; sourceTree = "<group>"; };
 		4C2036B121B1DE2E00F32A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2036BF21B30FE100F32A7F /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		4C2036C021B30FE100F32A7F /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		4C20368E21B1DE2B00F32A7F /* Quotia */ = {
 			isa = PBXGroup;
 			children = (
-				4C20369B21B1DE2E00F32A7F /* Info.plist */,
-				4C2036BD21B1DEF500F32A7F /* Resources */,
 				4C2036BE21B1DF0100F32A7F /* Sources */,
+				4C2036BD21B1DEF500F32A7F /* Resources */,
+				4C2036BF21B30FE100F32A7F /* Data */,
+				4C2036C021B30FE100F32A7F /* Model */,
+				4C20369B21B1DE2E00F32A7F /* Info.plist */,
 			);
 			path = Quotia;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2036C221B30FE100F32A7F /* Model in Resources */,
 				4C20369A21B1DE2E00F32A7F /* LaunchScreen.storyboard in Resources */,
 				4C20369721B1DE2E00F32A7F /* Assets.xcassets in Resources */,
+				4C2036C121B30FE100F32A7F /* Data in Resources */,
 				4C20369521B1DE2B00F32A7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
