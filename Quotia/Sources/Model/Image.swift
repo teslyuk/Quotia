@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  Images.swift
 //  CardDrop
 //
 //  Created by Brian Advent on 08.08.18.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Category: Decodable {
-    
-    var categoryName: String
-    var categoryImageName: String
+struct Image : Decodable {
+    var imageName:String
+    var photographer:String
+    var description:String
     
 }

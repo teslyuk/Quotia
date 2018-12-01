@@ -30,7 +30,7 @@ struct DataRequest<Type> where Type : Decodable{
             let data = try Data(contentsOf: dataURL)
             let resources = try PropertyListDecoder().decode([Type].self, from: data)
             completion(.success(resources))
-        } catch {
+        }catch{
             print(error.localizedDescription)
             completion(.failure)
         }
