@@ -10,10 +10,36 @@ import UIKit
 
 class OverviewCollectionViewController: UICollectionViewController {
     
+    let categoryDataRequest = DataRequest<Category>(dataSource: "Categories")
+    var categoryData = [Category]()
+    
     // MARK: - ViewController's lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadData()
+    }
+    
+    func loadData() {
+        categoryDataRequest.getData { [weak self] dataResult in
+            switch dataResult {
+            case .failure:
+                print("Could not load categories")
+                
+                let errorAlertController = UIAlertController(title: "Error", message: "Cannot load categories", preferredStyle: .alert)
+                
+                let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                errorAlertController.addAction(alertAction)
+                
+                self?.present(errorAlertController, animated: true, completion: nil)
+                
+            case .success(let categories):
+                self?.categoryData = categories
+                self?.collectionView.reloadData()
+            }
+        }
     }
     
 }
