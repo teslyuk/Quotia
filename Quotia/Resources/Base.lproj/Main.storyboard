@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,10 +63,29 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Quotia" id="tR1-Id-cmE"/>
+                    <connections>
+                        <segue destination="bQZ-hE-1Bo" kind="show" id="pdi-7F-1lq"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elq-12-e7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965.21739130434787" y="128.57142857142856"/>
+        </scene>
+        <!--Image Selection View Controller-->
+        <scene sceneID="zyu-1n-qTM">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bQZ-hE-1Bo" customClass="ImageSelectionViewController" customModule="Quotia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J4b-0G-20c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="N3q-rv-qn1"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q78-d0-f9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eqa-kS-Ill">

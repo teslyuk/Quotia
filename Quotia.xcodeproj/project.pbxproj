@@ -53,6 +53,9 @@
 		4C2036FE21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */; };
 		4C2036FF21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */; };
 		4C20370021B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */; };
+		4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
+		4C20370421B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
+		4C20370521B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,7 @@
 		4C2036EC21B31D0200F32A7F /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		4C2036ED21B31D0200F32A7F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */,
+				4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2036DE21B31C9300F32A7F /* Quote.swift in Sources */,
+				4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C2036E121B31C9300F32A7F /* Category.swift in Sources */,
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
 				4C2036E421B31C9300F32A7F /* DataRequest.swift in Sources */,
@@ -420,6 +426,7 @@
 				4C2036DF21B31C9300F32A7F /* Quote.swift in Sources */,
 				4C2036DC21B31C9300F32A7F /* Image.swift in Sources */,
 				4C2036FF21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
+				4C20370421B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C2036E221B31C9300F32A7F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +440,7 @@
 				4C2036E021B31C9300F32A7F /* Quote.swift in Sources */,
 				4C2036DD21B31C9300F32A7F /* Image.swift in Sources */,
 				4C20370021B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
+				4C20370521B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C2036E321B31C9300F32A7F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
