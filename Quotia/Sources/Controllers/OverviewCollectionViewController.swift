@@ -10,6 +10,8 @@ import UIKit
 
 class OverviewCollectionViewController: UICollectionViewController {
     
+    // MARK: - ViewController's lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

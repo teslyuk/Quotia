@@ -14,23 +14,28 @@ enum GetDataRequest<Type> {
 }
 
 
-struct DataRequest<Type> where Type : Decodable{
-    let dataURL:URL
+struct DataRequest<Type> where Type: Decodable {
     
-    init(dataSource:String) {
-        guard let dataPathString = Bundle.main.path(forResource: dataSource, ofType: "plist") else {fatalError()}
+    let dataURL: URL
+    
+    init(dataSource: String) {
+        
+        guard let dataPathString = Bundle.main.path(forResource: dataSource, ofType: "plist") else {
+            fatalError()
+        }
+        
         let dataURL = URL(fileURLWithPath: dataPathString)
         
         self.dataURL = dataURL
     }
     
-    func getData (completion: @escaping (GetDataRequest<Type>) -> Void) {
+    func getData(completion: @escaping (GetDataRequest<Type>) -> Void) {
         
         do {
             let data = try Data(contentsOf: dataURL)
             let resources = try PropertyListDecoder().decode([Type].self, from: data)
             completion(.success(resources))
-        }catch{
+        } catch {
             print(error.localizedDescription)
             completion(.failure)
         }
