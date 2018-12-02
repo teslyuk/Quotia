@@ -182,10 +182,10 @@
 		4C2036BD21B1DEF500F32A7F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4C2036C921B31C9300F32A7F /* Data */,
-				4C20369321B1DE2B00F32A7F /* Main.storyboard */,
 				4C20369621B1DE2E00F32A7F /* Assets.xcassets */,
+				4C20369321B1DE2B00F32A7F /* Main.storyboard */,
 				4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */,
+				4C2036C921B31C9300F32A7F /* Data */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

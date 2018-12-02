@@ -64,7 +64,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Quotia" id="tR1-Id-cmE"/>
                     <connections>
-                        <segue destination="bQZ-hE-1Bo" kind="show" id="pdi-7F-1lq"/>
+                        <segue destination="bQZ-hE-1Bo" kind="show" identifier="showImage" id="pdi-7F-1lq"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elq-12-e7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,14 +78,31 @@
                     <view key="view" contentMode="scaleToFill" id="J4b-0G-20c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q94-Fy-hlf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYt-ZV-ZaG">
+                                <rect key="frame" x="178" y="363" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N3q-rv-qn1"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="pYt-ZV-ZaG" id="dA0-3e-jj8"/>
+                        <outlet property="initialImageView" destination="q94-Fy-hlf" id="tQd-6q-w28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q78-d0-f9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741" y="129"/>
+            <point key="canvasLocation" x="1740.5797101449277" y="128.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eqa-kS-Ill">
