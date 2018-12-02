@@ -21,6 +21,8 @@ class OverviewCollectionViewController: UICollectionViewController {
         loadData()
     }
     
+    // MARK: - Functions
+    
     func loadData() {
         categoryDataRequest.getData { [weak self] dataResult in
             switch dataResult {
@@ -42,6 +44,26 @@ class OverviewCollectionViewController: UICollectionViewController {
         }
     }
     
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showImage" {
+            
+            if let category = sender as? Category {
+                
+                guard let image = UIImage(named: category.categoryImageName) else {
+                    return
+                }
+                
+                if let imageSelectionVC = segue.destination as? ImageSelectionViewController {
+                    imageSelectionVC.image = image
+                    imageSelectionVC.category = category
+                }
+                
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -84,6 +106,9 @@ extension OverviewCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let category = categoryData[indexPath.item]
+        
+        self.performSegue(withIdentifier: "showImage", sender: category)
         
     }
     
