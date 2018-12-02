@@ -46,24 +46,39 @@ class OverviewCollectionViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDataSource
 extension OverviewCollectionViewController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return categoryData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CategoryCollectionViewCell else {
+            
+            fatalError("Cannot create proper category cell for collection view")
+            
+        }
+        
+        let category = categoryData[indexPath.item]
+        
+        guard let image = UIImage(named: category.categoryImageName) else {
+            fatalError("Cannot load image for cell")
+        }
+        
+        cell.categoryName.text = category.categoryName
+        cell.categoryImage.image = image
+        
+        return cell
     }
+    
 }
 
 // MARK: - UICollectionViewDelegate
 extension OverviewCollectionViewController {
+    
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
+        cell.layer.cornerRadius = 14
         
     }
     
@@ -71,12 +86,15 @@ extension OverviewCollectionViewController {
         
         
     }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension OverviewCollectionViewController: UICollectionViewDelegateFlowLayout  {
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
      
-     }*/
+        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        
+    }
     
 }
