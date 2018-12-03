@@ -27,7 +27,12 @@ class ImageSelectionViewController: UIViewController {
         }
         
     }
-
+    
+    @IBAction func goBackAction(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension ImageSelectionViewController: ScalingProtocol {

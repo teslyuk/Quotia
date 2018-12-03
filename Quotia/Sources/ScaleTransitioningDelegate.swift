@@ -63,6 +63,10 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
         imageViewSnapshot.contentMode = .scaleAspectFill
         imageViewSnapshot.layer.masksToBounds = true
         
+        if navigationControllerOperation == .pop {
+            imageViewSnapshot.layer.cornerRadius = 14
+        }
+        
         backgroundImageView.isHidden = true
         foregroundImageView.isHidden = true
         
@@ -125,6 +129,8 @@ extension ScaleTransitioningDelegate: UINavigationControllerDelegate {
         
         if fromVC is ScalingProtocol && toVC is ScalingProtocol  {
             self.navigationControllerOperation = operation
+            let navBarVisible = operation == .pop
+            navigationController.setNavigationBarHidden(!navBarVisible, animated: true)
             return self
         } else {
             return nil
