@@ -121,10 +121,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="uvH-YG-78p" id="lWF-Mi-bK4"/>
                         <segue destination="Mvs-0e-5pX" kind="relationship" relationship="rootViewController" id="yaM-2d-ve0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6m-5L-A27" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="uvH-YG-78p" customClass="ScaleTransitioningDelegate" customModule="Quotia" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="55.072463768115945" y="128.57142857142856"/>
         </scene>

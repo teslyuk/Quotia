@@ -56,6 +56,9 @@
 		4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
 		4C20370421B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
 		4C20370521B452C100F32A7F /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */; };
+		4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
+		4C20370821B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
+		4C20370921B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,7 @@
 		4C2036ED21B31D0200F32A7F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 		4C2036BE21B1DF0100F32A7F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */,
 				4C2036E721B31CA900F32A7F /* Controllers */,
 				4C2036CD21B31C9300F32A7F /* Model */,
 				4C20370121B323B400F32A7F /* Cells */,
@@ -410,6 +415,7 @@
 				4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C2036E121B31C9300F32A7F /* Category.swift in Sources */,
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
+				4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4C2036E421B31C9300F32A7F /* DataRequest.swift in Sources */,
 				4C2036DB21B31C9300F32A7F /* Image.swift in Sources */,
 				4C2036FE21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
@@ -427,6 +433,7 @@
 				4C2036DC21B31C9300F32A7F /* Image.swift in Sources */,
 				4C2036FF21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
 				4C20370421B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
+				4C20370821B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4C2036E221B31C9300F32A7F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +448,7 @@
 				4C2036DD21B31C9300F32A7F /* Image.swift in Sources */,
 				4C20370021B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
 				4C20370521B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
+				4C20370921B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4C2036E321B31C9300F32A7F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
