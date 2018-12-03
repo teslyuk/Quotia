@@ -20,6 +20,7 @@ enum TransitionState {
 class ScaleTransitioningDelegate: NSObject {
     
     let animationDuration = 0.5
+    var navigationControllerOperation: UINavigationController.Operation = .none
     
 }
 
@@ -34,12 +35,20 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
         
         let containerView = transitionContext.containerView
         
-        guard let backgroundVC = transitionContext.viewController(forKey: .from) else {
+        guard let fromVC = transitionContext.viewController(forKey: .from) else {
             return
         }
         
-        guard let foregroundVC = transitionContext.viewController(forKey: .to) else {
+        guard let toVC = transitionContext.viewController(forKey: .to) else {
             return
+        }
+        
+        var backgroundVC = fromVC
+        var foregroundVC = toVC
+        
+        if navigationControllerOperation == .pop {
+            backgroundVC = toVC
+            foregroundVC = fromVC
         }
         
         guard let backgroundImageView = (backgroundVC as? ScalingProtocol)?.scalingImageView(transition: self) else {
@@ -65,8 +74,13 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
         containerView.addSubview(foregroundVC.view)
         containerView.addSubview(imageViewSnapshot)
         
-        let transitionStateA = TransitionState.begin
-        let transitionStateB = TransitionState.end
+        var transitionStateA = TransitionState.begin
+        var transitionStateB = TransitionState.end
+        
+        if navigationControllerOperation == .pop {
+            transitionStateA = TransitionState.end
+            transitionStateB = TransitionState.begin
+        }
         
         prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
         
@@ -109,6 +123,11 @@ extension ScaleTransitioningDelegate: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        return (fromVC is ScalingProtocol && toVC is ScalingProtocol) ? self : nil
+        if fromVC is ScalingProtocol && toVC is ScalingProtocol  {
+            self.navigationControllerOperation = operation
+            return self
+        } else {
+            return nil
+         }
     }
 }
