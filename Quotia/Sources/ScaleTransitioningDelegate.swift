@@ -20,7 +20,7 @@ enum TransitionState {
 class ScaleTransitioningDelegate: NSObject {
     
     let animationDuration = 0.5
-
+    
 }
 
 extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
@@ -87,7 +87,6 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
             
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
-        
     }
     
     func prepareViews(for state: TransitionState, containerView: UIView, backgroundVC: UIViewController, backgroundImageView: UIImageView, foregroundImageView: UIImageView, snapshotImageView: UIImageView) {
@@ -103,9 +102,7 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
             backgroundVC.view.alpha = 0
             snapshotImageView.frame = containerView.convert(foregroundImageView.frame, from: foregroundImageView.superview)
         }
-        
     }
-    
 }
 
 extension ScaleTransitioningDelegate: UINavigationControllerDelegate {
@@ -113,13 +110,5 @@ extension ScaleTransitioningDelegate: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return (fromVC is ScalingProtocol && toVC is ScalingProtocol) ? self : nil
-        
-//        if fromVC is ScalingProtocol && toVC is ScalingProtocol {
-//            return self
-//        } else {
-//            return nil
-//        }
-        
     }
-    
 }
