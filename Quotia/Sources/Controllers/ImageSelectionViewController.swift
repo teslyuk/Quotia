@@ -29,3 +29,9 @@ class ImageSelectionViewController: UIViewController {
     }
 
 }
+
+extension ImageSelectionViewController: ScalingProtocol {
+    func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
+        return initialImageView
+    }
+}

@@ -13,6 +13,8 @@ class OverviewCollectionViewController: UICollectionViewController {
     let categoryDataRequest = DataRequest<Category>(dataSource: "Categories")
     var categoryData = [Category]()
     
+    var selectedIndexPath: IndexPath?
+    
     // MARK: - ViewController's lifecycle
     
     override func viewDidLoad() {
@@ -108,6 +110,8 @@ extension OverviewCollectionViewController {
         
         let category = categoryData[indexPath.item]
         
+        selectedIndexPath = indexPath
+        
         self.performSegue(withIdentifier: "showImage", sender: category)
         
     }
@@ -120,6 +124,24 @@ extension OverviewCollectionViewController: UICollectionViewDelegateFlowLayout  
      
         return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
+    }
+    
+}
+
+// MARK: - Transitioning Animation Delegate
+extension OverviewCollectionViewController: ScalingProtocol {
+    
+    func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
+        
+        if let indexPath = selectedIndexPath {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell else {
+                return nil
+            }
+            
+            return cell.categoryImage
+        }
+        
+        return nil
     }
     
 }
