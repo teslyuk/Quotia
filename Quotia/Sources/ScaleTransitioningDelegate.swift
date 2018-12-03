@@ -107,3 +107,19 @@ extension ScaleTransitioningDelegate: UIViewControllerAnimatedTransitioning {
     }
     
 }
+
+extension ScaleTransitioningDelegate: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return (fromVC is ScalingProtocol && toVC is ScalingProtocol) ? self : nil
+        
+//        if fromVC is ScalingProtocol && toVC is ScalingProtocol {
+//            return self
+//        } else {
+//            return nil
+//        }
+        
+    }
+    
+}
