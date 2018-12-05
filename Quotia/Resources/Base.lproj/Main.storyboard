@@ -85,38 +85,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6O0-Tp-Kwn">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6O0-Tp-Kwn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="q94-Fy-hlf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="q94-Fy-hlf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YX3-rU-llO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YX3-rU-llO">
+                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYt-ZV-ZaG">
-                                                <rect key="frame" x="42" y="515" width="220" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYt-ZV-ZaG">
+                                                <rect key="frame" x="40" y="558" width="220" height="35"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jb-hw-oCf">
-                                                <rect key="frame" x="42" y="558" width="151" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jb-hw-oCf">
+                                                <rect key="frame" x="40" y="601" width="151" height="44"/>
                                                 <string key="text">Swipe to choose,
-to select</string>
+tap to select</string>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pYt-ZV-ZaG" secondAttribute="bottom" constant="750" id="3Gr-PJ-iOg"/>
+                                            <constraint firstItem="pYt-ZV-ZaG" firstAttribute="leading" secondItem="YX3-rU-llO" secondAttribute="leading" constant="40" id="QTZ-Wn-tce"/>
+                                            <constraint firstAttribute="trailing" secondItem="pYt-ZV-ZaG" secondAttribute="trailing" constant="699" id="QoX-yF-XfD"/>
+                                            <constraint firstItem="3jb-hw-oCf" firstAttribute="leading" secondItem="pYt-ZV-ZaG" secondAttribute="leading" id="WrD-ei-c0y"/>
+                                            <constraint firstItem="3jb-hw-oCf" firstAttribute="top" secondItem="pYt-ZV-ZaG" secondAttribute="bottom" constant="8" id="gdn-VL-ye9"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="YX3-rU-llO" firstAttribute="top" secondItem="6O0-Tp-Kwn" secondAttribute="top" id="4LF-QW-bEP"/>
+                                    <constraint firstAttribute="bottom" secondItem="q94-Fy-hlf" secondAttribute="bottom" id="7rw-4v-s41"/>
+                                    <constraint firstItem="q94-Fy-hlf" firstAttribute="leading" secondItem="6O0-Tp-Kwn" secondAttribute="leading" id="HoM-Kx-U6M"/>
+                                    <constraint firstItem="YX3-rU-llO" firstAttribute="leading" secondItem="6O0-Tp-Kwn" secondAttribute="leading" id="Iug-L6-TLf"/>
+                                    <constraint firstItem="q94-Fy-hlf" firstAttribute="top" secondItem="6O0-Tp-Kwn" secondAttribute="top" id="MlU-fu-vUD"/>
+                                    <constraint firstAttribute="trailing" secondItem="q94-Fy-hlf" secondAttribute="trailing" id="O37-sY-kVl"/>
+                                    <constraint firstAttribute="bottom" secondItem="YX3-rU-llO" secondAttribute="bottom" id="Pyf-g8-J0h"/>
+                                    <constraint firstAttribute="trailing" secondItem="YX3-rU-llO" secondAttribute="trailing" id="mTK-Sk-ZNc"/>
+                                </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVv-rS-iec">
                                 <rect key="frame" x="40" y="75" width="26" height="26"/>
@@ -128,6 +140,12 @@ to select</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="6O0-Tp-Kwn" secondAttribute="top" id="2wd-GJ-8PV"/>
+                            <constraint firstItem="N3q-rv-qn1" firstAttribute="trailing" secondItem="6O0-Tp-Kwn" secondAttribute="trailing" id="f84-h4-7Kv"/>
+                            <constraint firstItem="6O0-Tp-Kwn" firstAttribute="bottom" secondItem="J4b-0G-20c" secondAttribute="bottom" id="j2J-YB-JjN"/>
+                            <constraint firstItem="6O0-Tp-Kwn" firstAttribute="leading" secondItem="N3q-rv-qn1" secondAttribute="leading" id="yBr-hm-Ffc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N3q-rv-qn1"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
