@@ -170,6 +170,7 @@ tap to select</string>
                     <connections>
                         <outlet property="categoryLabel" destination="pYt-ZV-ZaG" id="dA0-3e-jj8"/>
                         <outlet property="initialImageView" destination="q94-Fy-hlf" id="tQd-6q-w28"/>
+                        <outlet property="scrollView" destination="6O0-Tp-Kwn" id="XGb-xv-O3p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q78-d0-f9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
