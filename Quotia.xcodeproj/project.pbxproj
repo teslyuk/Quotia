@@ -59,6 +59,8 @@
 		4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
 		4C20370821B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
 		4C20370921B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */; };
+		4C27F90D21B86C18000CD937 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C27F90C21B86C18000CD937 /* PhotoView.xib */; };
+		4C27F90F21B873BE000CD937 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27F90E21B873BE000CD937 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
 		4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
+		4C27F90C21B86C18000CD937 /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		4C27F90E21B873BE000CD937 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 				4C20369621B1DE2E00F32A7F /* Assets.xcassets */,
 				4C20369321B1DE2B00F32A7F /* Main.storyboard */,
 				4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */,
+				4C27F90C21B86C18000CD937 /* PhotoView.xib */,
 				4C2036C921B31C9300F32A7F /* Data */,
 			);
 			path = Resources;
@@ -199,8 +204,8 @@
 			children = (
 				4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */,
 				4C2036E721B31CA900F32A7F /* Controllers */,
-				4C2036CD21B31C9300F32A7F /* Model */,
-				4C20370121B323B400F32A7F /* Cells */,
+				4C2036CD21B31C9300F32A7F /* Models */,
+				4C27F91021B873C3000CD937 /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -216,7 +221,7 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		4C2036CD21B31C9300F32A7F /* Model */ = {
+		4C2036CD21B31C9300F32A7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4C2036CE21B31C9300F32A7F /* Image.swift */,
@@ -224,7 +229,7 @@
 				4C2036D021B31C9300F32A7F /* Category.swift */,
 				4C2036D121B31C9300F32A7F /* DataRequest.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4C2036E721B31CA900F32A7F /* Controllers */ = {
@@ -254,6 +259,15 @@
 				4C2036FD21B323AC00F32A7F /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4C27F91021B873C3000CD937 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C27F90E21B873BE000CD937 /* PhotoView.swift */,
+				4C20370121B323B400F32A7F /* Cells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +385,7 @@
 				4C2036F121B31D0200F32A7F /* Montserrat-ExtraLight.ttf in Resources */,
 				4C2036D821B31C9300F32A7F /* Categories.plist in Resources */,
 				4C20369521B1DE2B00F32A7F /* Main.storyboard in Resources */,
+				4C27F90D21B86C18000CD937 /* PhotoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +429,7 @@
 				4C2036DE21B31C9300F32A7F /* Quote.swift in Sources */,
 				4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C2036E121B31C9300F32A7F /* Category.swift in Sources */,
+				4C27F90F21B873BE000CD937 /* PhotoView.swift in Sources */,
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
 				4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4C2036E421B31C9300F32A7F /* DataRequest.swift in Sources */,
