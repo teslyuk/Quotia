@@ -276,9 +276,9 @@ your best today.</string>
                     <connections>
                         <outlet property="authorLabel" destination="AT0-u4-sWB" id="Mhc-5c-xfh"/>
                         <outlet property="authorNameLabel" destination="AT0-u4-sWB" id="ubf-E0-E1e"/>
-                        <outlet property="backgroundImageView" destination="3UA-ls-hbV" id="6bm-tq-LxV"/>
+                        <outlet property="backgroundImageView" destination="3UA-ls-hbV" id="65S-o4-pbV"/>
                         <outlet property="quoteLabel" destination="1db-3I-oSR" id="8bS-5h-whO"/>
-                        <outlet property="textContainerView" destination="y6y-qM-YSU" id="XBG-3T-Wz6"/>
+                        <outlet property="textContainerView" destination="y6y-qM-YSU" id="ewI-p3-Ne7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1m-0v-vFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
