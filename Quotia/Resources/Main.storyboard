@@ -238,6 +238,11 @@ your best today.</string>
                                         <state key="normal" title="Share Card">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="shareCard:" destination="y3N-BF-D6J" eventType="touchUpInside" id="Z97-WI-flr"/>
                                         </connections>
