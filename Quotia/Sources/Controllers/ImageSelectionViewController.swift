@@ -19,9 +19,15 @@ class ImageSelectionViewController: UIViewController {
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var dimView: UIView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        dimView.alpha = 0
+        backButton.alpha = 0
 
         if let availableImage = image, let availableCategory = category {
             
@@ -65,6 +71,11 @@ class ImageSelectionViewController: UIViewController {
     }
     
     func setupUI() {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.dimView.alpha = 1
+            self.backButton.alpha = 1
+        }
 
         scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
         
@@ -89,7 +100,16 @@ class ImageSelectionViewController: UIViewController {
     
     @IBAction func goBackAction(_ sender: UIButton) {
         
-        self.navigationController?.popViewController(animated: true)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.scrollView.setContentOffset(CGPoint.zero, animated: false)
+        }) { _ in
+            UIView.animate(withDuration: 0.2, animations: {
+                self.dimView.alpha = 0
+                sender.alpha = 0
+            }, completion: { _ in
+                self.navigationController?.popViewController(animated: true)
+            })
+        }
     }
     
 }

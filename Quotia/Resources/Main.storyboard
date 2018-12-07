@@ -153,7 +153,9 @@ tap to select</string>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="YZv-FR-5yJ" id="VLv-f6-Pcn"/>
                         <outlet property="categoryLabel" destination="Cjf-zW-vfd" id="7lL-wS-3cl"/>
+                        <outlet property="dimView" destination="dRQ-Ws-1TN" id="yTL-Zl-X3Q"/>
                         <outlet property="initialImageView" destination="wci-Fa-1Ia" id="OXc-OP-AM8"/>
                         <outlet property="scrollView" destination="3Ff-yd-VIX" id="qen-ps-rn8"/>
                     </connections>
@@ -185,8 +187,102 @@ tap to select</string>
             </objects>
             <point key="canvasLocation" x="82" y="654"/>
         </scene>
+        <!--Share Quote View Controller-->
+        <scene sceneID="bk1-b2-Mau">
+            <objects>
+                <viewController id="y3N-BF-D6J" customClass="ShareQuoteViewController" customModule="Quotia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OwE-vP-YYW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3UA-ls-hbV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-qM-YSU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1db-3I-oSR">
+                                        <rect key="frame" x="41" y="286" width="293" height="95.5"/>
+                                        <string key="text">The best preperation
+for tomorrow is doing 
+your best today.</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- H. Jackson Brown, Jr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT0-u4-sWB">
+                                        <rect key="frame" x="76" y="401" width="223" height="25"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rD-45-Yu7">
+                                        <rect key="frame" x="30" y="55" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="CancelButtonDark">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissVC:" destination="y3N-BF-D6J" eventType="touchUpInside" id="58P-P5-iUh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-q7-1WK">
+                                        <rect key="frame" x="103.5" y="208" width="168" height="53"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="k9Z-eU-DhN"/>
+                                            <constraint firstAttribute="height" constant="53" id="r5O-LH-FrK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                        <state key="normal" title="Share Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareCard:" destination="y3N-BF-D6J" eventType="touchUpInside" id="Z97-WI-flr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1db-3I-oSR" firstAttribute="leading" secondItem="y6y-qM-YSU" secondAttribute="leading" constant="41" id="1eO-IE-3xU"/>
+                                    <constraint firstAttribute="trailing" secondItem="1db-3I-oSR" secondAttribute="trailing" constant="41" id="24L-9K-gwn"/>
+                                    <constraint firstItem="AT0-u4-sWB" firstAttribute="centerX" secondItem="y6y-qM-YSU" secondAttribute="centerX" id="OnN-yl-Nob"/>
+                                    <constraint firstItem="AT0-u4-sWB" firstAttribute="top" secondItem="1db-3I-oSR" secondAttribute="bottom" constant="19.5" id="bbj-5x-MKp"/>
+                                    <constraint firstItem="1db-3I-oSR" firstAttribute="centerY" secondItem="y6y-qM-YSU" secondAttribute="centerY" id="g0F-ot-iXh"/>
+                                    <constraint firstItem="YGl-q7-1WK" firstAttribute="centerX" secondItem="y6y-qM-YSU" secondAttribute="centerX" id="lnb-3f-iGp"/>
+                                    <constraint firstItem="1db-3I-oSR" firstAttribute="top" secondItem="YGl-q7-1WK" secondAttribute="bottom" constant="25" id="zKe-5A-K8i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X3g-IM-grq" firstAttribute="trailing" secondItem="y6y-qM-YSU" secondAttribute="trailing" id="1I2-EQ-Pz4"/>
+                            <constraint firstAttribute="bottom" secondItem="y6y-qM-YSU" secondAttribute="bottom" id="Hqh-sK-HMe"/>
+                            <constraint firstAttribute="top" secondItem="3UA-ls-hbV" secondAttribute="top" id="JPz-gc-I5t"/>
+                            <constraint firstAttribute="bottom" secondItem="3UA-ls-hbV" secondAttribute="bottom" id="WRT-vI-x1L"/>
+                            <constraint firstItem="y6y-qM-YSU" firstAttribute="leading" secondItem="X3g-IM-grq" secondAttribute="leading" id="bPi-WK-yPD"/>
+                            <constraint firstItem="3UA-ls-hbV" firstAttribute="leading" secondItem="X3g-IM-grq" secondAttribute="leading" id="dIk-ua-07j"/>
+                            <constraint firstAttribute="top" secondItem="y6y-qM-YSU" secondAttribute="top" id="e2d-Dg-QtE"/>
+                            <constraint firstItem="X3g-IM-grq" firstAttribute="trailing" secondItem="3UA-ls-hbV" secondAttribute="trailing" id="iJE-Px-2DB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X3g-IM-grq"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="AT0-u4-sWB" id="Mhc-5c-xfh"/>
+                        <outlet property="authorNameLabel" destination="AT0-u4-sWB" id="ubf-E0-E1e"/>
+                        <outlet property="backgroundImageView" destination="3UA-ls-hbV" id="6bm-tq-LxV"/>
+                        <outlet property="quoteLabel" destination="1db-3I-oSR" id="8bS-5h-whO"/>
+                        <outlet property="textContainerView" destination="y6y-qM-YSU" id="XBG-3T-Wz6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1m-0v-vFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="654"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
         <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
     </resources>

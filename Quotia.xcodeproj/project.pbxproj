@@ -67,6 +67,9 @@
 		4C2D6E6C21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
 		4C2D6E6D21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
 		4C2D6E6E21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
+		4C2D6E7021BB238300B7D29D /* ShareQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */; };
+		4C2D6E7121BB238300B7D29D /* ShareQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */; };
+		4C2D6E7221BB238300B7D29D /* ShareQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,7 @@
 		4C27F90E21B873BE000CD937 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		4C2D6E6721BAF82600B7D29D /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoView.xib; path = "../../../../../Downloads/Exercise Files/07_07/end/CardDropApp/CardDropApp/PhotoView.xib"; sourceTree = "<group>"; };
 		4C2D6E6B21BAF87100B7D29D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQuoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,7 @@
 			children = (
 				4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */,
 				4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */,
+				4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
 				4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4C2036E421B31C9300F32A7F /* DataRequest.swift in Sources */,
+				4C2D6E7021BB238300B7D29D /* ShareQuoteViewController.swift in Sources */,
 				4C2036DB21B31C9300F32A7F /* Image.swift in Sources */,
 				4C2036FE21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
 				4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */,
@@ -458,6 +464,7 @@
 				4C2036DF21B31C9300F32A7F /* Quote.swift in Sources */,
 				4C2D6E6121B87E1100B7D29D /* PhotoView.swift in Sources */,
 				4C2036DC21B31C9300F32A7F /* Image.swift in Sources */,
+				4C2D6E7121BB238300B7D29D /* ShareQuoteViewController.swift in Sources */,
 				4C2036FF21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
 				4C20370421B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C20370821B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
@@ -474,6 +481,7 @@
 				4C2036E021B31C9300F32A7F /* Quote.swift in Sources */,
 				4C2D6E6221B87E1200B7D29D /* PhotoView.swift in Sources */,
 				4C2036DD21B31C9300F32A7F /* Image.swift in Sources */,
+				4C2D6E7221BB238300B7D29D /* ShareQuoteViewController.swift in Sources */,
 				4C20370021B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
 				4C20370521B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C20370921B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
