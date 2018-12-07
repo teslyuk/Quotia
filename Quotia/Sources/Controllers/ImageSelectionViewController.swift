@@ -82,6 +82,8 @@ class ImageSelectionViewController: UIViewController {
             photoView.descriptionLabel.text = image.description
             photoView.photographerLabel.text = image.photographer
             
+            scrollView.addSubview(photoView)
+            
         }
     }
     
