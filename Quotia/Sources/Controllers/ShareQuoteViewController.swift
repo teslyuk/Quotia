@@ -61,7 +61,7 @@ class ShareQuoteViewController: UIViewController {
     }
     
     @IBAction func dismissAction(_ sender: UIButton) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

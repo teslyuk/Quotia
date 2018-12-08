@@ -22,6 +22,8 @@ class ImageSelectionViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var dimView: UIView!
     
+    var currentScrollViewPage: Int = 0
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -76,6 +78,8 @@ class ImageSelectionViewController: UIViewController {
             self.dimView.alpha = 1
             self.backButton.alpha = 1
         }
+        
+        scrollView.delegate = self
 
         scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
         
@@ -96,6 +100,21 @@ class ImageSelectionViewController: UIViewController {
             scrollView.addSubview(photoView)
             
         }
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ImageSelectionViewController.didPressOnScrollView(recognizer:)))
+        
+        scrollView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func didPressOnScrollView(recognizer: UITapGestureRecognizer) {
+        
+        if currentScrollViewPage != 0 {
+            self.performSegue(withIdentifier: "shareQuote", sender: self)
+        } else {
+            scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
+            currentScrollViewPage = 1
+        }
+        
     }
     
     @IBAction func goBackAction(_ sender: UIButton) {
@@ -112,10 +131,34 @@ class ImageSelectionViewController: UIViewController {
         }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "shareQuote" {
+            
+            guard let shareQuoteVC = segue.destination as? ShareQuoteViewController else {
+                return
+            }
+            
+            guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
+                return
+            }
+            
+            shareQuoteVC.backgroundImage = imageToShare
+            shareQuoteVC.modalTransitionStyle = .crossDissolve
+        }
+    }
+    
 }
 
 extension ImageSelectionViewController: ScalingProtocol {
     func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
         return initialImageView
+    }
+}
+
+extension ImageSelectionViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        currentScrollViewPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
     }
 }
