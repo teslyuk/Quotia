@@ -122,7 +122,22 @@ extension OverviewCollectionViewController {
 extension OverviewCollectionViewController: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
      
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        
+        let screenRect = UIScreen.main.nativeBounds
+        
+        if (screenRect.size.height == 1136) {
+            
+            return UIEdgeInsets(top: 6, left: 5, bottom: 6, right: 5)
+
+        } else if (screenRect.size.height == 2688) {
+            
+            return UIEdgeInsets(top: 25, left: 36, bottom: 25, right: 36)
+            
+        } else {
+            
+            return UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+            
+        }
         
     }
     

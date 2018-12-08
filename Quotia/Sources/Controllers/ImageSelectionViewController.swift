@@ -30,6 +30,7 @@ class ImageSelectionViewController: UIViewController {
         
         dimView.alpha = 0
         backButton.alpha = 0
+        categoryLabel.adjustsFontSizeToFitWidth = true
 
         if let availableImage = image, let availableCategory = category {
             

@@ -6,7 +6,7 @@
 		<key>imageName</key>
 		<string>image1</string>
 		<key>description</key>
-		<string>Mountain Waterfall</string>
+		<string>Mountain </string>
 		<key>photographer</key>
 		<string>Will Stewart</string>
 	</dict>
@@ -14,7 +14,7 @@
 		<key>imageName</key>
 		<string>image2</string>
 		<key>description</key>
-		<string>Mainboard Closeup</string>
+		<string>Mainboard</string>
 		<key>photographer</key>
 		<string>Fancevrave</string>
 	</dict>
