@@ -58,6 +58,15 @@ class ShareQuoteViewController: UIViewController {
     
     @IBAction func shareAction(_ sender: UIButton) {
         
+        _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = true })
+        
+        let image = self.view.performScreenshot()
+        
+        _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = false })
+
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func dismissAction(_ sender: UIButton) {
