@@ -1,9 +1,9 @@
 //
-//  Images.swift
-//  CardDrop
+//  Image.swift
+//  Quotia
 //
-//  Created by Brian Advent on 08.08.18.
-//  Copyright © 2018 Brian Advent. All rights reserved.
+//  Created by Nikita Teslyuk on 08/12/2018.
+//  Copyright © 2018 Nikita Teslyuk. All rights reserved.
 //
 
 import Foundation

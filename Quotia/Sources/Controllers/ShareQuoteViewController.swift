@@ -32,6 +32,35 @@ class ShareQuoteViewController: UIViewController {
     
     func loadData() {
         
+        quoteDataRequest.getData { [weak self] dataResult in
+            
+            switch dataResult {
+            case .failure:
+                let alertController = UIAlertController(title: "Error", message: "Cannot load quotes", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                
+                alertController.addAction(okAction)
+                
+                self?.present(alertController, animated: true, completion: nil)
+                
+            case .success(let quotes):
+                let randomQuoteNumber = Int.random(in: 0 ..< quotes.count)
+                
+                DispatchQueue.main.async {
+                    self?.authorNameLabel.text = quotes[randomQuoteNumber].author
+                    self?.quoteLabel.text = quotes[randomQuoteNumber].quote
+                }
+            }
+            
+        }
+        
     }
+    
+    @IBAction func shareAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func dismissAction(_ sender: UIButton) {
+    }
+    
 
 }

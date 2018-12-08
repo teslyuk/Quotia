@@ -224,6 +224,7 @@ your best today.</string>
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
+                                            <action selector="dismissAction:" destination="y3N-BF-D6J" eventType="touchUpInside" id="39X-Or-4SO"/>
                                             <action selector="dismissVC:" destination="y3N-BF-D6J" eventType="touchUpInside" id="58P-P5-iUh"/>
                                         </connections>
                                     </button>
@@ -244,6 +245,7 @@ your best today.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="shareAction:" destination="y3N-BF-D6J" eventType="touchUpInside" id="ifh-SY-0iW"/>
                                             <action selector="shareCard:" destination="y3N-BF-D6J" eventType="touchUpInside" id="Z97-WI-flr"/>
                                         </connections>
                                     </button>
