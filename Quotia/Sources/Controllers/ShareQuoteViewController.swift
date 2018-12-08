@@ -57,10 +57,21 @@ class ShareQuoteViewController: UIViewController {
     }
     
     @IBAction func shareAction(_ sender: UIButton) {
+        
     }
     
     @IBAction func dismissAction(_ sender: UIButton) {
+        
     }
-    
+}
 
+
+extension UIView {
+    
+    func performScreenshot() -> UIImage {
+        
+        return UIGraphicsImageRenderer(size: bounds.size).image(actions: { _ in
+            drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
+        })
+    }
 }
