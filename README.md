@@ -1,3 +1,3 @@
 # Quotia
 
-Simple way to share quotes and beautiful pictures. Made for own purposes only.
+Simple way to share quotes and beautiful pictures. Made for the purpose of showing animation and UI/UX design skills.
