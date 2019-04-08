@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareCardViewController" customModule="Quotia" customModuleProvider="target">
+            <connections>
+                <outlet property="authorLabel" destination="nTt-Do-zt4" id="646-AP-p3D"/>
+                <outlet property="backgroundImageView" destination="MEo-UB-Lxi" id="Wfr-5b-hsU"/>
+                <outlet property="quoteLabel" destination="7IX-1s-Dsl" id="bED-zX-NdH"/>
+                <outlet property="textContainerView" destination="tNR-Oo-uer" id="vdI-XW-XAy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEo-UB-Lxi">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-Oo-uer">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IX-1s-Dsl">
+                            <rect key="frame" x="16" y="276" width="343" height="95.5"/>
+                            <string key="text">The best preperation
+for tomorrow is doing 
+your best today.</string>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H. Jackson Brown, Jr." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTt-Do-zt4">
+                            <rect key="frame" x="16" y="379.5" width="343" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDQ-Fq-kFN">
+                            <rect key="frame" x="103.5" y="215" width="168" height="53"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="nHL-Zn-2oh"/>
+                                <constraint firstAttribute="width" constant="168" id="oo3-Ld-TWj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                            <state key="normal" title="Share Card">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4O-fU-lmv">
+                            <rect key="frame" x="38" y="46" width="26" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="V4O-fU-lmv" secondAttribute="height" multiplier="1:1" id="8BO-FI-ATj"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="CancelButtonDark">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7IX-1s-Dsl" secondAttribute="trailing" constant="16" id="01q-u3-hAw"/>
+                        <constraint firstItem="YDQ-Fq-kFN" firstAttribute="centerX" secondItem="tNR-Oo-uer" secondAttribute="centerX" id="5n6-b8-8LZ"/>
+                        <constraint firstItem="7IX-1s-Dsl" firstAttribute="centerY" secondItem="tNR-Oo-uer" secondAttribute="centerY" id="8KY-js-ZLa"/>
+                        <constraint firstItem="nTt-Do-zt4" firstAttribute="centerX" secondItem="tNR-Oo-uer" secondAttribute="centerX" id="DZ6-g1-XwV"/>
+                        <constraint firstItem="7IX-1s-Dsl" firstAttribute="top" secondItem="YDQ-Fq-kFN" secondAttribute="bottom" constant="8" id="MZp-YN-DWB"/>
+                        <constraint firstItem="V4O-fU-lmv" firstAttribute="leading" secondItem="tNR-Oo-uer" secondAttribute="leading" constant="38" id="Pk6-8R-qAy"/>
+                        <constraint firstAttribute="trailing" secondItem="nTt-Do-zt4" secondAttribute="trailing" constant="16" id="Znf-ql-Y52"/>
+                        <constraint firstItem="7IX-1s-Dsl" firstAttribute="centerX" secondItem="tNR-Oo-uer" secondAttribute="centerX" id="Znh-zb-u0X"/>
+                        <constraint firstItem="V4O-fU-lmv" firstAttribute="top" secondItem="tNR-Oo-uer" secondAttribute="top" constant="46" id="a11-76-mg9"/>
+                        <constraint firstItem="nTt-Do-zt4" firstAttribute="top" secondItem="7IX-1s-Dsl" secondAttribute="bottom" constant="8" id="a5e-go-fsJ"/>
+                        <constraint firstItem="7IX-1s-Dsl" firstAttribute="leading" secondItem="tNR-Oo-uer" secondAttribute="leading" constant="16" id="eRc-Hf-GD6"/>
+                        <constraint firstItem="nTt-Do-zt4" firstAttribute="leading" secondItem="tNR-Oo-uer" secondAttribute="leading" constant="16" id="gJ5-E6-AZz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MEo-UB-Lxi" secondAttribute="trailing" id="6e1-Gx-D9h"/>
+                <constraint firstItem="MEo-UB-Lxi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Jl-dO-Zq8"/>
+                <constraint firstItem="tNR-Oo-uer" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GWT-SD-lmy"/>
+                <constraint firstItem="tNR-Oo-uer" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="T7S-gS-4cX"/>
+                <constraint firstItem="MEo-UB-Lxi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Yh9-GG-SSc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tNR-Oo-uer" secondAttribute="trailing" id="fZS-K3-MoV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tNR-Oo-uer" secondAttribute="bottom" id="fdo-ym-dKq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MEo-UB-Lxi" secondAttribute="bottom" id="kVt-ih-cD3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
+    </resources>
+</document>
