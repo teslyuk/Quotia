@@ -91,15 +91,15 @@ class ImageSelectionViewController: UIViewController {
   
   @objc func didPressOnScrollView(recognizer: UITapGestureRecognizer) {
     if currentScrollViewPage != 0 {
-      self.performSegue(withIdentifier: "shareQuote", sender: self)
-//      let controller = ShareCardController()
-//      let viewController = ShareCardViewController(controller: controller)
-//      controller.set(viewController: viewController)
-//      guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
-//        return
-//      }
-//      viewController.backgroundImage = imageToShare
-//      self.navigationController?.pushViewController(viewController, animated: true)
+      //self.performSegue(withIdentifier: "shareQuote", sender: self)
+      let controller = ShareCardController()
+      let viewController = ShareCardViewController(controller: controller)
+      controller.set(viewController: viewController)
+      guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
+        return
+      }
+      viewController.backgroundImage = imageToShare
+      self.navigationController?.pushViewController(viewController, animated: true)
     } else {
       scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
       currentScrollViewPage = 1
@@ -120,20 +120,20 @@ class ImageSelectionViewController: UIViewController {
   }
   
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "shareQuote" {
-      guard let shareQuoteVC = segue.destination as? ShareQuoteViewController else {
-        return
-      }
-      
-      guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
-        return
-      }
-      
-      shareQuoteVC.backgroundImage = imageToShare
-      shareQuoteVC.modalTransitionStyle = .crossDissolve
-    }
-  }
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "shareQuote" {
+//      guard let shareQuoteVC = segue.destination as? ShareQuoteViewController else {
+//        return
+//      }
+//
+//      guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
+//        return
+//      }
+//
+//      shareQuoteVC.backgroundImage = imageToShare
+//      shareQuoteVC.modalTransitionStyle = .crossDissolve
+//    }
+//  }
   
 }
 

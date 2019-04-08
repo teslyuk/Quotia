@@ -12,9 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
+  private let router = Router()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+//    let categoryController = CategoryController()
+//    let categoryViewController = CategoryViewController(controller: categoryController)
+//    categoryController.set(viewController: categoryViewController)
+//
+//    router.root(&window, rootViewController: categoryViewController)
+    
     return true
   }
   
