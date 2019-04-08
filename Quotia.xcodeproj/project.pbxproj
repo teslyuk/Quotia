@@ -347,13 +347,16 @@
 				TargetAttributes = {
 					4C20368B21B1DE2B00F32A7F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					4C20369F21B1DE2E00F32A7F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 4C20368B21B1DE2B00F32A7F;
 					};
 					4C2036AA21B1DE2E00F32A7F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 4C20368B21B1DE2B00F32A7F;
 					};
 				};
@@ -642,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.Quotia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -661,7 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.Quotia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -681,7 +684,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.QuotiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotia.app/Quotia";
 			};
@@ -702,7 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.QuotiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotia.app/Quotia";
 			};
@@ -722,7 +725,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.QuotiaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Quotia;
 			};
@@ -742,7 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.tesnik.QuotiaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Quotia;
 			};

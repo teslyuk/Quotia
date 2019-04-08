@@ -9,78 +9,62 @@
 import UIKit
 
 class ShareQuoteViewController: UIViewController {
-
-    @IBOutlet weak var quoteLabel: UILabel!
-    @IBOutlet weak var authorNameLabel: UILabel!
-    @IBOutlet weak var textContainerView: UIView!
-    @IBOutlet weak var backgroundImageView: UIImageView!
+  @IBOutlet weak var quoteLabel: UILabel!
+  @IBOutlet weak var authorNameLabel: UILabel!
+  @IBOutlet weak var textContainerView: UIView!
+  @IBOutlet weak var backgroundImageView: UIImageView!
+  
+  var backgroundImage: UIImage?
+  let quoteDataRequest = DataRequest<Quote>(dataSource: "Quotes")
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    guard let image = backgroundImage else {
+      return
+    }
     
-    var backgroundImage: UIImage?
-    let quoteDataRequest = DataRequest<Quote>(dataSource: "Quotes")
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    backgroundImageView.image = image
+    loadData()
+  }
+  
+  func loadData() {
+    quoteDataRequest.getData { [weak self] (dataResult) in
+      
+      switch dataResult {
+      case .failure:
+        let alertController = UIAlertController(title: "Error", message: "Cannot load quotes", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
-        guard let image = backgroundImage else {
-            return
+        alertController.addAction(okAction)
+        self?.present(alertController, animated: true, completion: nil)
+        
+      case .success(let quotes):
+        let randomQuoteNumber = Int.random(in: 0 ..< quotes.count)
+        DispatchQueue.main.async {
+          self?.authorNameLabel.text = quotes[randomQuoteNumber].author
+          self?.quoteLabel.text = quotes[randomQuoteNumber].quote
         }
-        
-        backgroundImageView.image = image
-        
-        loadData()
+      }
     }
-    
-    func loadData() {
-        
-        quoteDataRequest.getData { [weak self] dataResult in
-            
-            switch dataResult {
-            case .failure:
-                let alertController = UIAlertController(title: "Error", message: "Cannot load quotes", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                
-                alertController.addAction(okAction)
-                
-                self?.present(alertController, animated: true, completion: nil)
-                
-            case .success(let quotes):
-                let randomQuoteNumber = Int.random(in: 0 ..< quotes.count)
-                
-                DispatchQueue.main.async {
-                    self?.authorNameLabel.text = quotes[randomQuoteNumber].author
-                    self?.quoteLabel.text = quotes[randomQuoteNumber].quote
-                }
-            }
-            
-        }
-        
-    }
-    
-    @IBAction func shareAction(_ sender: UIButton) {
-        
-        _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = true })
-        
-        let image = self.view.performScreenshot()
-        
-        _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = false })
-
-        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.present(activityVC, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func dismissAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+  }
+  
+  @IBAction func shareAction(_ sender: UIButton) {
+    _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = true })
+    let image = self.view.performScreenshot()
+    _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = false })
+    let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    self.present(activityVC, animated: true, completion: nil)
+  }
+  
+  @IBAction func dismissAction(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+  }
 }
 
-
 extension UIView {
-    
-    func performScreenshot() -> UIImage {
-        
-        return UIGraphicsImageRenderer(size: bounds.size).image(actions: { _ in
-            drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
-        })
-    }
+  func performScreenshot() -> UIImage {
+    return UIGraphicsImageRenderer(size: bounds.size).image(actions: { _ in
+      drawHierarchy(in: CGRect(origin: .zero, size: bounds.size), afterScreenUpdates: true)
+    })
+  }
 }

@@ -9,9 +9,7 @@
 import UIKit
 
 class PhotoView: UIView {
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var photographerLabel: UILabel!
-    
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var photographerLabel: UILabel!
 }

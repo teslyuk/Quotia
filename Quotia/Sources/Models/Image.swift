@@ -9,9 +9,7 @@
 import Foundation
 
 struct Image: Decodable {
-    
-    var imageName: String
-    var photographer: String
-    var description: String
-    
+  var imageName: String
+  var photographer: String
+  var description: String
 }

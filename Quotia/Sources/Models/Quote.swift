@@ -9,8 +9,6 @@
 import Foundation
 
 struct Quote: Decodable {
-    
-    var quote: String
-    var author: String
-    
+  var quote: String
+  var author: String
 }

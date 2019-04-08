@@ -9,8 +9,6 @@
 import Foundation
 
 struct Category: Decodable {
-    
-    var categoryName: String
-    var categoryImageName: String
-    
+  var categoryName: String
+  var categoryImageName: String
 }
