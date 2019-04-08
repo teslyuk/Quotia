@@ -72,6 +72,9 @@ your best today.</string>
                                     <integer key="value" value="14"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="shareButtonAction:" destination="-1" eventType="touchUpInside" id="12E-hp-ujG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4O-fU-lmv">
                             <rect key="frame" x="38" y="46" width="26" height="26"/>
@@ -82,6 +85,9 @@ your best today.</string>
                             <state key="normal" image="CancelButtonDark">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="closeCardButtonAction:" destination="-1" eventType="touchUpInside" id="agr-2D-xxL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

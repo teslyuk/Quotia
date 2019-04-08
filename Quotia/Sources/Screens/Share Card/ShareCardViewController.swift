@@ -11,7 +11,7 @@ import UIKit
 class ShareCardViewController: UIViewController {
   
   private var controller: ShareCardController?
-  private var backgroundImage: UIImage?
+  var backgroundImage: UIImage?
 
   convenience init(controller: ShareCardController) {
     self.init()
@@ -25,9 +25,30 @@ class ShareCardViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    Decorator.decorate(self)
     controller?.viewDidLoad()
+    setBackgroundImage()
   }
   
+  private func setBackgroundImage() {
+    guard let image = backgroundImage else {
+      return
+    }
+    backgroundImageView.image = image
+  }
+  
+  @IBAction func shareButtonAction(_ sender: UIButton) {
+    _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = true })
+    let image = self.view.performScreenshot()
+    _ = textContainerView.subviews.filter({ $0 is UIButton }).map({ $0.isHidden = false })
+    let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    self.present(activityVC, animated: true, completion: nil)
+  }
+  
+  @IBAction func closeCardButtonAction(_ sender: UIButton) {
+    //self.dismiss(animated: true, completion: nil)
+    self.navigationController?.popViewController(animated: true)
+  }
 }
 
 private extension ShareCardViewController {
@@ -35,7 +56,7 @@ private extension ShareCardViewController {
     private init() {}
     
     static func decorate(_ vc: ShareCardViewController) {
-      
+      vc.backgroundImageView.contentMode = .scaleAspectFill
     }
   }
 }

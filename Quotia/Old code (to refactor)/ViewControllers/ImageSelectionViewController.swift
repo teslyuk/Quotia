@@ -92,6 +92,14 @@ class ImageSelectionViewController: UIViewController {
   @objc func didPressOnScrollView(recognizer: UITapGestureRecognizer) {
     if currentScrollViewPage != 0 {
       self.performSegue(withIdentifier: "shareQuote", sender: self)
+//      let controller = ShareCardController()
+//      let viewController = ShareCardViewController(controller: controller)
+//      controller.set(viewController: viewController)
+//      guard let imageToShare = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {
+//        return
+//      }
+//      viewController.backgroundImage = imageToShare
+//      self.navigationController?.pushViewController(viewController, animated: true)
     } else {
       scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
       currentScrollViewPage = 1
