@@ -72,6 +72,10 @@
 		4CC1B7CD225BA7A700583E5B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7CB225BA7A700583E5B /* CategoryViewController.swift */; };
 		4CC1B7CE225BA7A700583E5B /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1B7CC225BA7A700583E5B /* CategoryViewController.xib */; };
 		4CC1B7D0225BA7CE00583E5B /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7CF225BA7CE00583E5B /* CategoryController.swift */; };
+		4CC1B7D3225BA95800583E5B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7D2225BA95800583E5B /* DependencyProvider.swift */; };
+		4CC1B7D8225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7D7225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift */; };
+		4CC1B7DA225BAB2400583E5B /* Extensions+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7D9225BAB2400583E5B /* Extensions+UIAlertController.swift */; };
+		4CC1B7DC225BAB9800583E5B /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B7DB225BAB9800583E5B /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +135,10 @@
 		4CC1B7CB225BA7A700583E5B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		4CC1B7CC225BA7A700583E5B /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		4CC1B7CF225BA7CE00583E5B /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		4CC1B7D2225BA95800583E5B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		4CC1B7D7225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		4CC1B7D9225BAB2400583E5B /* Extensions+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIAlertController.swift"; sourceTree = "<group>"; };
+		4CC1B7DB225BAB9800583E5B /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,9 @@
 		4C2036BE21B1DF0100F32A7F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4CC1B7D5225BAA9C00583E5B /* Custom Views */,
+				4CC1B7D4225BAA1D00583E5B /* Models */,
+				4CC1B7D1225BA94700583E5B /* Objects */,
 				4CC1B7C7225BA6E900583E5B /* Routers */,
 				4CC1B7C4225B67EC00583E5B /* Extensions */,
 				4CC1B7B6225B61F600583E5B /* Protocols */,
@@ -244,10 +255,7 @@
 		4C2036CD21B31C9300F32A7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4C2D6E7321BBB93D00B7D29D /* Image.swift */,
 				4C2D6E7721BBB96800B7D29D /* DataRequest.swift */,
-				4C2D6E7B21BBB98500B7D29D /* Category.swift */,
-				4C2D6E7F21BBB99900B7D29D /* Quote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,8 +292,6 @@
 		4C27F91021B873C3000CD937 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4CC1B7B4225B434D00583E5B /* PhotoView.xib */,
-				4C27F90E21B873BE000CD937 /* PhotoView.swift */,
 				4C20370121B323B400F32A7F /* Cells */,
 			);
 			path = Views;
@@ -296,6 +302,7 @@
 			children = (
 				4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */,
 				4CC1B7C1225B62D300583E5B /* Lifecycable.swift */,
+				4CC1B7DB225BAB9800583E5B /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -333,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				4CC1B7C5225B680300583E5B /* Extensions+UIView.swift */,
+				4CC1B7D7225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift */,
+				4CC1B7D9225BAB2400583E5B /* Extensions+UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +362,41 @@
 				4CC1B7CC225BA7A700583E5B /* CategoryViewController.xib */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		4CC1B7D1225BA94700583E5B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4CC1B7D2225BA95800583E5B /* DependencyProvider.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		4CC1B7D4225BAA1D00583E5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C2D6E7B21BBB98500B7D29D /* Category.swift */,
+				4C2D6E7F21BBB99900B7D29D /* Quote.swift */,
+				4C2D6E7321BBB93D00B7D29D /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CC1B7D5225BAA9C00583E5B /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC1B7D6225BAAB500583E5B /* PhotoView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		4CC1B7D6225BAAB500583E5B /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				4CC1B7B4225B434D00583E5B /* PhotoView.xib */,
+				4C27F90E21B873BE000CD937 /* PhotoView.swift */,
+			);
+			path = PhotoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,12 +564,14 @@
 			files = (
 				4CC1B7BA225B626C00583E5B /* ShareCardViewController.swift in Sources */,
 				4C2D6E7821BBB96800B7D29D /* DataRequest.swift in Sources */,
+				4CC1B7DA225BAB2400583E5B /* Extensions+UIAlertController.swift in Sources */,
 				4C20370321B452C100F32A7F /* ImageSelectionViewController.swift in Sources */,
 				4C27F90F21B873BE000CD937 /* PhotoView.swift in Sources */,
 				4CC1B7D0225BA7CE00583E5B /* CategoryController.swift in Sources */,
 				4CC1B7CD225BA7A700583E5B /* CategoryViewController.swift in Sources */,
 				4C20369021B1DE2B00F32A7F /* AppDelegate.swift in Sources */,
 				4CC1B7C2225B62D300583E5B /* Lifecycable.swift in Sources */,
+				4CC1B7DC225BAB9800583E5B /* NibLoadable.swift in Sources */,
 				4C20370721B4730800F32A7F /* ScaleTransitioningDelegate.swift in Sources */,
 				4CC1B7C9225BA6F400583E5B /* Router.swift in Sources */,
 				4C2036FE21B323AC00F32A7F /* CategoryCollectionViewCell.swift in Sources */,
@@ -533,6 +579,8 @@
 				4C2D6E7421BBB93D00B7D29D /* Image.swift in Sources */,
 				4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */,
 				4C2D6E7C21BBB98500B7D29D /* Category.swift in Sources */,
+				4CC1B7D3225BA95800583E5B /* DependencyProvider.swift in Sources */,
+				4CC1B7D8225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift in Sources */,
 				4C2D6E8021BBB99900B7D29D /* Quote.swift in Sources */,
 				4CC1B7C6225B680300583E5B /* Extensions+UIView.swift in Sources */,
 			);
