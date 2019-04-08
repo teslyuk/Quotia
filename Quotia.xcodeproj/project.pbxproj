@@ -49,9 +49,6 @@
 		4C27F90F21B873BE000CD937 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27F90E21B873BE000CD937 /* PhotoView.swift */; };
 		4C2D6E6121B87E1100B7D29D /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27F90E21B873BE000CD937 /* PhotoView.swift */; };
 		4C2D6E6221B87E1200B7D29D /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C27F90E21B873BE000CD937 /* PhotoView.swift */; };
-		4C2D6E6821BAF82600B7D29D /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6721BAF82600B7D29D /* PhotoView.xib */; };
-		4C2D6E6921BAF82600B7D29D /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6721BAF82600B7D29D /* PhotoView.xib */; };
-		4C2D6E6A21BAF82600B7D29D /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6721BAF82600B7D29D /* PhotoView.xib */; };
 		4C2D6E6C21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
 		4C2D6E6D21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
 		4C2D6E6E21BAF87100B7D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2D6E6B21BAF87100B7D29D /* Main.storyboard */; };
@@ -70,6 +67,7 @@
 		4C2D6E8021BBB99900B7D29D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E7F21BBB99900B7D29D /* Quote.swift */; };
 		4C2D6E8121BBB99900B7D29D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E7F21BBB99900B7D29D /* Quote.swift */; };
 		4C2D6E8221BBB99900B7D29D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D6E7F21BBB99900B7D29D /* Quote.swift */; };
+		4CC1B7B5225B434D00583E5B /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1B7B4225B434D00583E5B /* PhotoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,13 +112,13 @@
 		4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
 		4C20370621B4730800F32A7F /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 		4C27F90E21B873BE000CD937 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
-		4C2D6E6721BAF82600B7D29D /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoView.xib; path = "../../../../../Downloads/Exercise Files/07_07/end/CardDropApp/CardDropApp/PhotoView.xib"; sourceTree = "<group>"; };
 		4C2D6E6B21BAF87100B7D29D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C2D6E6F21BB238300B7D29D /* ShareQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQuoteViewController.swift; sourceTree = "<group>"; };
 		4C2D6E7321BBB93D00B7D29D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4C2D6E7721BBB96800B7D29D /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		4C2D6E7B21BBB98500B7D29D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4C2D6E7F21BBB99900B7D29D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		4CC1B7B4225B434D00583E5B /* PhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2D6E6B21BAF87100B7D29D /* Main.storyboard */,
-				4C2D6E6721BAF82600B7D29D /* PhotoView.xib */,
+				4CC1B7B4225B434D00583E5B /* PhotoView.xib */,
 				4C20369621B1DE2E00F32A7F /* Assets.xcassets */,
 				4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */,
 				4C2036C921B31C9300F32A7F /* Data */,
@@ -396,7 +394,7 @@
 				4C2036F421B31D0200F32A7F /* Montserrat-Bold.ttf in Resources */,
 				4C2036F121B31D0200F32A7F /* Montserrat-ExtraLight.ttf in Resources */,
 				4C2036D821B31C9300F32A7F /* Categories.plist in Resources */,
-				4C2D6E6821BAF82600B7D29D /* PhotoView.xib in Resources */,
+				4CC1B7B5225B434D00583E5B /* PhotoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +409,6 @@
 				4C2036F521B31D0200F32A7F /* Montserrat-Bold.ttf in Resources */,
 				4C2036F821B31D0200F32A7F /* Montserrat-SemiBold.ttf in Resources */,
 				4C2036EF21B31D0200F32A7F /* Montserrat-Medium.ttf in Resources */,
-				4C2D6E6921BAF82600B7D29D /* PhotoView.xib in Resources */,
 				4C2036D621B31C9300F32A7F /* Quotes.plist in Resources */,
 				4C2036F221B31D0200F32A7F /* Montserrat-ExtraLight.ttf in Resources */,
 			);
@@ -428,7 +425,6 @@
 				4C2036F621B31D0200F32A7F /* Montserrat-Bold.ttf in Resources */,
 				4C2036F921B31D0200F32A7F /* Montserrat-SemiBold.ttf in Resources */,
 				4C2036F021B31D0200F32A7F /* Montserrat-Medium.ttf in Resources */,
-				4C2D6E6A21BAF82600B7D29D /* PhotoView.xib in Resources */,
 				4C2036D721B31C9300F32A7F /* Quotes.plist in Resources */,
 				4C2036F321B31D0200F32A7F /* Montserrat-ExtraLight.ttf in Resources */,
 			);
