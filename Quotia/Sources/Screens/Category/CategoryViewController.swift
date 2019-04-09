@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryViewController: UIViewController {
 
+  @IBOutlet weak var collectionView: UICollectionView!
+  
   private var controller: CategoryController?
   
   convenience init(controller: CategoryController) {
@@ -19,8 +21,7 @@ class CategoryViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    controller?.viewDidLoad()
   }
-
-  
   
 }

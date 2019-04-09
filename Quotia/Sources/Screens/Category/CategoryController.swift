@@ -16,8 +16,35 @@ class CategoryController: NSObject, Lifecycable {
     self.viewController = viewController
   }
   
+  var collectionView: UICollectionView? {
+    return viewController?.collectionView
+  }
+  
   func viewDidLoad() {
+    delegating()
+    registerCells()
+  }
+  
+  private func delegating() {
+    collectionView?.dataSource = self
+  }
+  
+  private func registerCells() {
+    collectionView?.register(CategoryCollectionViewCell.nib, forCellWithReuseIdentifier: CategoryCollectionViewCell.name)
+  }
+}
+
+extension CategoryController: UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.name, for: indexPath) as? CategoryCollectionViewCell {
+      return cell
+    }
     
+    return UICollectionViewCell()
   }
 }
 
