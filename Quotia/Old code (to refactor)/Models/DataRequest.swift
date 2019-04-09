@@ -13,7 +13,6 @@ enum GetDataRequest<Type> {
   case failure
 }
 
-
 struct DataRequest<Type> where Type: Decodable {
   let dataURL: URL
   

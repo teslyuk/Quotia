@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let categoryController = CategoryController()
     let categoryViewController = CategoryViewController(controller: categoryController)
     categoryController.set(viewController: categoryViewController)
-    
+
     let router = dependencyProvider.fetchRouter()
     router.root(&window, rootViewController: categoryViewController)
     

@@ -36,7 +36,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEo-UB-Lxi">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-Oo-uer">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
@@ -109,17 +109,17 @@ your best today.</string>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MEo-UB-Lxi" secondAttribute="trailing" id="6e1-Gx-D9h"/>
-                <constraint firstItem="MEo-UB-Lxi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Jl-dO-Zq8"/>
+                <constraint firstItem="MEo-UB-Lxi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bez-jD-SCH"/>
                 <constraint firstItem="tNR-Oo-uer" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GWT-SD-lmy"/>
+                <constraint firstItem="MEo-UB-Lxi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KgZ-NU-ETw"/>
                 <constraint firstItem="tNR-Oo-uer" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="T7S-gS-4cX"/>
-                <constraint firstItem="MEo-UB-Lxi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Yh9-GG-SSc"/>
+                <constraint firstItem="MEo-UB-Lxi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UwP-XF-i5r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tNR-Oo-uer" secondAttribute="trailing" id="fZS-K3-MoV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tNR-Oo-uer" secondAttribute="bottom" id="fdo-ym-dKq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MEo-UB-Lxi" secondAttribute="bottom" id="kVt-ih-cD3"/>
+                <constraint firstAttribute="bottom" secondItem="MEo-UB-Lxi" secondAttribute="bottom" id="mL8-nv-9KT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+            <point key="canvasLocation" x="52.173913043478265" y="47.544642857142854"/>
         </view>
     </objects>
     <resources>
