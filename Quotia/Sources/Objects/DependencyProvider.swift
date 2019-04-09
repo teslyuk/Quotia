@@ -13,4 +13,9 @@ class DependencyProvider {
     let router = Router()
     return router
   }
+  
+  func mainRouter(router: Router) -> MainRouter {
+    let mainRouter = MainRouter(router: router)
+    return mainRouter
+  }
 }

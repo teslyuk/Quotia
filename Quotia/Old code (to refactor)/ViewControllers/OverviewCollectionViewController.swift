@@ -71,7 +71,7 @@ extension OverviewCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CategoryCollectionViewCell else {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CategoryOldCollectionViewCell else {
       
       fatalError("Cannot create proper category cell for collection view")
     }
@@ -119,7 +119,7 @@ extension OverviewCollectionViewController: UICollectionViewDelegateFlowLayout  
 extension OverviewCollectionViewController: ScalingProtocol {
   func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
     if let indexPath = selectedIndexPath {
-      guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell else {
+      guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryOldCollectionViewCell else {
         return nil
       }
       return cell.categoryImage

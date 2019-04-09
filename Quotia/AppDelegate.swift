@@ -13,15 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   private let dependencyProvider = DependencyProvider()
-
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-//    let categoryController = CategoryController()
-//    let categoryViewController = CategoryViewController(controller: categoryController)
-//    categoryController.set(viewController: categoryViewController)
-//
-//    let router = dependencyProvider.fetchRouter()
-//    router.root(&window, rootViewController: categoryViewController)
+    //    let categoryController = CategoryController()
+    //    let categoryViewController = CategoryViewController(controller: categoryController)
+    //    categoryController.set(viewController: categoryViewController)
+    //
+    //    let router = dependencyProvider.fetchRouter()
+    //    router.root(&window, rootViewController: categoryViewController)
     
     return true
   }
