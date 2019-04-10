@@ -12,7 +12,6 @@
 		4C20369A21B1DE2E00F32A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C20369821B1DE2E00F32A7F /* LaunchScreen.storyboard */; };
 		4C2036A521B1DE2E00F32A7F /* QuotiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036A421B1DE2E00F32A7F /* QuotiaTests.swift */; };
 		4C2036B021B1DE2E00F32A7F /* QuotiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036AF21B1DE2E00F32A7F /* QuotiaUITests.swift */; };
-		4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */; };
 		4C2036D221B31C9300F32A7F /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036CA21B31C9300F32A7F /* Images.plist */; };
 		4C2036D321B31C9300F32A7F /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036CA21B31C9300F32A7F /* Images.plist */; };
 		4C2036D421B31C9300F32A7F /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C2036CA21B31C9300F32A7F /* Images.plist */; };
@@ -110,7 +109,6 @@
 		4C2036AB21B1DE2E00F32A7F /* QuotiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2036AF21B1DE2E00F32A7F /* QuotiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotiaUITests.swift; sourceTree = "<group>"; };
 		4C2036B121B1DE2E00F32A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewController.swift; sourceTree = "<group>"; };
 		4C2036CA21B31C9300F32A7F /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		4C2036CB21B31C9300F32A7F /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
 		4C2036CC21B31C9300F32A7F /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 		4CC1B7B7225B620D00583E5B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C2036C321B3133900F32A7F /* OverviewCollectionViewController.swift */,
 				4C20370221B452C100F32A7F /* ImageSelectionViewController.swift */,
 			);
 			path = ViewControllers;
@@ -597,7 +594,6 @@
 				4CC1B7C0225B629600583E5B /* ShareCardController.swift in Sources */,
 				4C2D6E7421BBB93D00B7D29D /* Image.swift in Sources */,
 				4C49824F225D1B9000FF8F22 /* CategoryCollectionViewCell.swift in Sources */,
-				4C2036C421B3133900F32A7F /* OverviewCollectionViewController.swift in Sources */,
 				4C2D6E7C21BBB98500B7D29D /* Category.swift in Sources */,
 				4CC1B7D3225BA95800583E5B /* DependencyProvider.swift in Sources */,
 				4CC1B7D8225BAAFC00583E5B /* Extensions+NSLayoutConstraint.swift in Sources */,
@@ -786,7 +782,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJS444RRKW;
 				INFOPLIST_FILE = Quotia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -805,7 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJS444RRKW;
 				INFOPLIST_FILE = Quotia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

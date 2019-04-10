@@ -22,6 +22,18 @@ class CategoryViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     controller?.viewDidLoad()
+    Decorator.decorate(self)
   }
   
+}
+
+private extension CategoryViewController {
+  final class Decorator {
+    private init() {}
+    
+    static func decorate(_ vc: CategoryViewController) {
+      vc.navigationController?.navigationBar.prefersLargeTitles = true
+      vc.navigationItem.title = "Quotia"
+    }
+  }
 }
