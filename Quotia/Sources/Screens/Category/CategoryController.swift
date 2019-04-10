@@ -27,6 +27,7 @@ class CategoryController: NSObject, Lifecycable {
   
   private func delegating() {
     collectionView?.dataSource = self
+    collectionView?.delegate = self
   }
   
   private func registerCells() {
@@ -45,6 +46,34 @@ extension CategoryController: UICollectionViewDataSource {
     }
     
     return UICollectionViewCell()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: 150, height: 200)
+  }
+}
+
+extension CategoryController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    cell.layer.cornerRadius = 14
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+  }
+}
+
+extension CategoryController: UICollectionViewDelegateFlowLayout  {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    let screenRect = UIScreen.main.nativeBounds
+    
+    if (screenRect.size.height == 1136) {
+      return UIEdgeInsets(top: 6, left: 5, bottom: 6, right: 5)
+    } else if (screenRect.size.height == 2688) {
+      return UIEdgeInsets(top: 25, left: 36, bottom: 25, right: 36)
+    } else {
+      return UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+    }
   }
 }
 
